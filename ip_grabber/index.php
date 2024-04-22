@@ -13,8 +13,14 @@ function logIpAddress($filename) {
     $user_agent = $_SERVER["HTTP_USER_AGENT"];
     $ip_address = $_SERVER["REMOTE_ADDR"];
 
-    $ips_logs = fopen($filename, "a");
+    // Check if the log file exists, if not, create it
+    if (!file_exists($filename)) {
+        $ips_logs = fopen($filename, "w");
+        fclose($ips_logs);
+    }
 
+    // Append the IP address log to the file
+    $ips_logs = fopen($filename, "a");
     $content = "";
     $content .= "===============[$timestamp]===============\n";
     $content .= "User-Agent: $user_agent\n";
@@ -32,9 +38,9 @@ $is404 = True;
 if ($current_file === "meow.jpg")  // You can change meow.jpg to any name you want.
 {  
     logIpAddress($log_file);
-    $is404 = False;               // To prevent the execution of the 404 page condition below.
-    $file = 'cute_cat.png';       // Make sure image file/path you put here exists in your directory.
-    $type = 'image/jpeg';         // MIME type to represent an image file.
+    $is404 = False;                   // To prevent the execution of the 404 page condition below.
+    $file = './assets/cute_cat.png';  // Make sure image file/path you put here exists in your directory.
+    $type = 'image/jpeg';             // MIME type to represent an image file.
 
 }
 elseif ($current_file === $log_file)
