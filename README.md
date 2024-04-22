@@ -34,3 +34,5 @@ The Image IP Grabber project is a simple demonstration of how an image file can 
 
 ## License
 This project is licensed under the terms of the [MIT License](LICENSE).
+## Contributing
+Contributions are welcome! Feel free to submit pull requests, suggest new features, or report issues.
