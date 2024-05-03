@@ -1,6 +1,5 @@
 <h1 align="center">Image IP Grabber/Logger</h1>
-<!-- <p align="center"><img height="250" width="250" src="https://raw.githubusercontent.com/haxinja/images/main/haxinja-IMAGE-ip-grabber.png"></p> -->
-<p align="center"><img height="250" width="250" src="https://www.haxinja.cloud/test/img/meow.jpg"></p>
+<p align="center"><img height="250" width="250" src="https://raw.githubusercontent.com/haxinja/images/main/haxinja-IMAGE-ip-grabber.png"></p>
 
 ## Overview
 The Image IP Grabber project is a simple demonstration of how an image file can be used to log visitors' IP addresses when accessed through a web server. It includes an index.php file that logs visitors' IP addresses and serves an image file, along with a .htaccess file for URL rewriting.
